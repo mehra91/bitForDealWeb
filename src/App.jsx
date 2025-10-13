@@ -9,8 +9,20 @@ import { BsPersonFillAdd } from "react-icons/bs";
 import Carousel from './components/Carousel';
 import { CiGrid42 } from "react-icons/ci";
 import { FaSortDown } from "react-icons/fa6";
+import Cards from './components/Cards';
+
 
 const App = () => {
+    // const Products = [
+    //     {
+    //         img: "../public/faceCream.jpeg",
+    //         aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
+    //         price:0.00,
+    //         timer:"00:00:00",
+    //         button:Closed,
+    //         para:"Buy it now: ₹59.00"
+    //     }
+    // ]
   return (
          <div>
             <div id='topMostHeader' className=' h-28 w-full mt-0 p-0 flex flex-col justify-center top-0 shadow-xl/30 absolute '>
@@ -81,6 +93,10 @@ const App = () => {
                     </button>
 
                 </div>
+            </div>
+             <div className='w-full h-auto  mt-10 flex flex-wrap items-center justify-evenly   '> 
+                <Cards/>
+                 
             </div>
         </div>
   )
