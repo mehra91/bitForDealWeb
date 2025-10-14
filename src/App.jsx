@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState} from 'react';
 import { RiExchangeDollarLine } from "react-icons/ri";
 import { RiAuctionLine } from "react-icons/ri";
 import { LuArrowLeftRight } from "react-icons/lu";
@@ -13,16 +13,75 @@ import Cards from './components/Cards';
 
 
 const App = () => {
-    // const Products = [
-    //     {
-    //         img: "../public/faceCream.jpeg",
-    //         aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
-    //         price:0.00,
-    //         timer:"00:00:00",
-    //         button:Closed,
-    //         para:"Buy it now: ₹59.00"
-    //     }
-    // ]
+    const Products = [
+        {
+            img: "../public/faceCream.jpeg",
+            aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
+            price:0.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹59.00"
+        },
+        {
+            img: " /grinder.jpg",
+            aboutProduct :" KitchenAid Artisan Series 5-Quart Mixer, Empire Re...",
+            price:971.50,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹199.00"
+        },
+        {
+            img: " /earbuds.jpeg",
+            aboutProduct :"Veho STIX II Pro True Wireless Earphones with ANC...",
+            price:2998.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹999.00"
+        },
+        {
+            img: " /glasses.jpg",
+            aboutProduct :"Earth Wood Kotor Sunglasses - Black Metal / Dark B...",
+            price:1992.00,
+            timer:"00:00:00",
+            button:'sold',
+            para:" ₹599.00"
+        },
+        {
+            img: " /headphones.jpg",
+            aboutProduct :" Beats Studio Pro - Wireless Noise Cancelling Over-...",
+            price:4999.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹999.00"
+        },
+        {
+            img: " /macBook.jpeg",
+            aboutProduct :" MacBook Pro",
+            price:105000.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹49999.00"
+        },
+        {
+            img: " /iphone.jpg",
+            aboutProduct :"MacBook Pro",
+            price:135000.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹75000.00"
+        },
+        {
+            img: " /samsung.jpg",
+            aboutProduct :" Samsung Galaxy S25 Ultra",
+            price:104599.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹39000.00"
+        }
+
+    ]
+
+     
   return (
          <div>
             <div id='topMostHeader' className=' h-28 w-full mt-0 p-0 flex flex-col justify-center top-0 shadow-xl/30 absolute '>
@@ -56,11 +115,11 @@ const App = () => {
                     
                 
             </div>
-                {/* <Carousel /> */}
+                <Carousel />
 
 
 
-            <div className='mt-40 flex items-center justify-between p-10   font-semibold  h-20 w-full'>
+            <div className=' mt-10 flex items-center justify-between p-10   font-semibold  h-20 w-full'>
                 <div className='w-auto h-20 flex justify-start flex-col gap-y-2'>
                     <h2 className='text-3xl font-semibold'>
                         All Products
@@ -94,8 +153,21 @@ const App = () => {
 
                 </div>
             </div>
-             <div className='w-full h-auto  mt-10 flex flex-wrap items-center justify-evenly   '> 
-                <Cards/>
+             <div className='w-full h-auto   flex flex-wrap items-center justify-evenly   '> 
+                {
+                    Products.map(( prod,idx)=>(
+                             <Cards 
+                              key={idx}
+                              img={prod.img}
+                              about = {prod.aboutProduct}
+                              price = {prod.price}
+                              timer={prod.timer } 
+                              btn={prod.button} 
+                              
+                              para = {prod.para} />
+                    ))
+                }
+            
                  
             </div>
         </div>
