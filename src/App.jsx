@@ -11,6 +11,9 @@ import { CiGrid42 } from "react-icons/ci";
 import { FaSortDown } from "react-icons/fa6";
 import Cards from './components/Cards';
 import AboutCard from './components/AboutCard';
+import { FaCheckCircle } from "react-icons/fa";
+import { IoMdContacts } from "react-icons/io";
+import { IoIosLock } from "react-icons/io";
 
 
 const App = () => {
@@ -203,6 +206,9 @@ const App = () => {
                         next
                     </button>
             </div>
+                {/* About Section */}
+
+
             <div className='   h-screen w-full  '>
                 <h4 className='text-3xl flex items-center justify-center font-semibold flex-col '>
                     How It Works
@@ -219,6 +225,7 @@ const App = () => {
                         ))
                     }
                 </div>
+ 
                 <div className='  h-96 w-full mt-5  pl-15 pt-2 pr-2   ' >
                     <h2 className='capitalize text-2xl font-semibold opacity-90  '>
                         About us
@@ -245,11 +252,95 @@ const App = () => {
                    
 
                 </div>
+                <div className="w-240 h-96 mt-8 ml-15 mr-8  rounded-2xl shadow-lg text-center px-6 py-10 bg-gradient-to-b from-orange-400 to-indigo-950 text-white">
+                             
+                     <h2 className="text-3xl font-bold  tracking-tighter mt-8  mb-2">
+                        <span className="gap-1">💥</span> Ready to Win Your Favorite Products at 90% Off?
+                    </h2>
+                    <p className="text-lg text-slate-300 font-semibold mb-6">
+                       👉 Join millions of happy bidders today.
+                    </p>
 
+                          
+                    <div className="flex flex-wrap justify-center gap-4 mb-10">
+                         <button className="border border-white/60 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer    ">
+                            Sign Up Free
+                        </button>
+                        <button className="border border-white/60 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer">
+                            Browse Auctions Now
+                        </button>
+                         <button className="border border-white/60 text-white px-4 py-3 rounded-lg font-semibold cursor-pointer">
+                             Get Your First Bid Pack
+                         </button>
+                    </div>
+ 
+                    <div className="flex flex-wrap justify-evenly items-start gap-y-8 text-center">
+                        <div className="flex flex-col items-center w-52">
+                            <div className="text-cyan-400 text-3xl ">
+                                <FaCheckCircle />
+                            </div>
+                                <h3 className="font-bold text-lg ">
+                                    Easy to Join
+                                </h3>
+                                    <p className="text-sm text-gray-200">
+                                        Sign up in 30 seconds and get a welcome bid.
+                                    </p>
+                        </div>
 
+                        <div className="flex flex-col items-center w-52">
+                            <div className="text-yellow-400 text-3xl">
+                                <IoMdContacts />
+                            </div>
+                                <h3 className="font-semibold text-lg ">
+                                    Real Winners
+                                </h3>
+                                <p className="text-sm text-gray-200">
+                                    Thousands of verified wins every week.
+                                </p>
+                        </div>
+
+                        <div className="flex flex-col items-center w-52">
+                            <div className="text-green-400 text-3xl ">
+                                <IoIosLock />
+                            </div>
+                                <h3 className="font-semibold text-lg">
+                                    Secure Payments
+                                </h3>
+                                <p className="text-sm text-gray-200">
+                                    Trusted checkout & buyer protection.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                {/* frequently asked question section */}
+             
+                <div className='  h-84 w-full   items-center  p-4    '>
+                    <h2 className='text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
+                        frequently asked Questions
+                         <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
+                            <div className='h-1 bg-white rounded-2xl  opacity-80     w-8 '>
+
+                            </div>
+                        </div>
+                    </h2>
+                    <div className='flex items-center justify-evenly m-8 bg-green-800 h-90 w-240'>
+                        <img src="/query.jpg" alt="queryImg" className='h-full w-1/2' />
+                        <div className='h-full w-1/2 bg-yellow-600'>
+                                 <button></button>
+                                 <button></button>
+                                 <button></button>
+                                 <button></button>
+                                 <button></button>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+
+            
         </div>
-  )
+    )
 }
 
 export default App;
