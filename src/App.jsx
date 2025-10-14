@@ -10,6 +10,7 @@ import Carousel from './components/Carousel';
 import { CiGrid42 } from "react-icons/ci";
 import { FaSortDown } from "react-icons/fa6";
 import Cards from './components/Cards';
+import AboutCard from './components/AboutCard';
 
 
 const App = () => {
@@ -79,6 +80,28 @@ const App = () => {
             para:" ₹39000.00"
         }
 
+    ]
+    const aboutWorking = [
+        {
+            id:"01",
+            heading :" - Browse Products",
+            para :" Explore a wide variety of brand-new items from electronics, fashion, home essentials to gift cards."
+        },
+        {
+            id:"02",
+            heading :" - Buy Bids",
+            para :"  To participate in auctions, purchase bid packs. Each bid placed, reduced the item price."
+        },
+        {
+            id:"03",
+            heading :" – Join Auctions",
+            para :"  Place bids on your favorite products. Every new bid resets the countdown timer."
+        },
+        {
+            id:"04",
+            heading :"– Buy It Now (BIN)",
+            para :"Didn’t win? No worries! Apply the bids you used toward buying the product at regular retail price."
+        },
     ]
 
      
@@ -167,8 +190,63 @@ const App = () => {
                               para = {prod.para} />
                     ))
                 }
-            
-                 
+             
+            </div>
+            <div className=' h-10 w-210 flex items-center justify-center ml-25 mb-10 mt-8 ' >
+                    <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
+                        prev
+                    </button>
+                    <span>
+                        Page 1 of 1
+                    </span>
+                    <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white ml-2 hover:cursor-pointer '>
+                        next
+                    </button>
+            </div>
+            <div className='   h-screen w-full  '>
+                <h4 className='text-3xl flex items-center justify-center font-semibold flex-col '>
+                    How It Works
+                     <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
+                            <div className='h-1 bg-white rounded-2xl  opacity-80     w-8 '>
+
+                            </div>
+                    </div>
+                </h4>
+                <div className='mt-12  flex items-center justify-evenly flex-wrap'>  
+                    {
+                        aboutWorking.map((props,id)=>(
+                                <AboutCard key={id} id={props.id} heading={props.heading} para={props.para} />
+                        ))
+                    }
+                </div>
+                <div className='  h-96 w-full mt-5  pl-15 pt-2 pr-2   ' >
+                    <h2 className='capitalize text-2xl font-semibold opacity-90  '>
+                        About us
+                    </h2>
+                    
+                   <div className=' flex items-start justify-evenly h-full w-full gap-x-2 '>
+                  
+                        <p className=' flex items-start tracking- justify-center flex-col text-lg mt-2' >
+                                Bid For Deal is the world’s premier “fair & honest” bidding site founded in 2020. We’ve delivered millions of brand-new products to satisfied customers across the Europe. Our mission is simple:
+                                <ul className="list-disc pl-8 mt-2 ">
+                                 
+                                    <li>Make shopping exciting, fun, and affordable.</li>
+                                    <li>Provide only brand-new items, shipped free, with warranties.</li>
+                                    <li>Create a fair bidding environment with transparency and customer protection.</li>
+                                </ul>
+                         <button className='capitalize bg-orange-400 flex  items-center justify-center h-10 w-32 ml-3 cursor-pointer rounded-lg mt-3 text-white font-bold'>
+                            read more
+                         </button>
+                         </p>
+                         <img src="/aboutImg.png" alt="aboutImg" className='h-84 w-full ' />
+                         
+                   </div>
+                   
+                   
+
+                </div>
+
+
             </div>
         </div>
   )

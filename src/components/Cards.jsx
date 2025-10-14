@@ -18,7 +18,7 @@ const Cards = ({img,about,price,timer,btn,para}) => {
 );
   return (
    
-            <div className='h-98 w-1/5 bg-white rounded-lg m-5 p-2 pb-4 px-4 flex flex-col items-center shadow-xl/30  shadow-[0_0_12px_rgba(0,0,0,0.3)] hover:scale-102 ' >
+            <div className='h-94 w-45 bg-white rounded-lg m-5 p-2 pb-4 px-2 flex flex-col items-center shadow-xl/30  shadow-[0_0_12px_rgba(0,0,0,0.3)] hover:scale-102 ' >
                          <img src={img}  className='rounded-md h-40 w-full  object-cover' /> 
                         <p className='text-base font-bold  w-full h-20 flex items-center justify-center text-center '>
                            {about}
@@ -31,7 +31,7 @@ const Cards = ({img,about,price,timer,btn,para}) => {
                                {timer}
                             </span>
                         </div>
-                        <button className=' bg-red-600 mb-1 uppercase h-auto w-full p-1 rounded-md flex items-center justify-center text-2xl font-stretch-extra-expanded font-semibold text-white'>
+                        <button className=' bg-red-600 mb-1 uppercase h-auto w-full p-1 rounded-md flex items-center justify-center text-lg font-stretch-extra-expanded font-semibold text-white'>
                             {btn}
                            
                         </button>
