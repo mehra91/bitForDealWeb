@@ -14,6 +14,8 @@ import AboutCard from './components/AboutCard';
 import { FaCheckCircle } from "react-icons/fa";
 import { IoMdContacts } from "react-icons/io";
 import { IoIosLock } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
+import QuesCard from './components/QuesCard';
 
 
 const App = () => {
@@ -105,6 +107,29 @@ const App = () => {
             heading :"– Buy It Now (BIN)",
             para :"Didn’t win? No worries! Apply the bids you used toward buying the product at regular retail price."
         },
+    ]
+
+    const QuesAns =  [
+        {
+            Ques:"Is Bid for deal legit",
+            Ans: "✅ Yes, Bid for Deal has been in business since 2020 with millions of customers and verified suppliers."
+        },
+         {
+            Ques: "What happens if I don't win an auction ? ",
+            Ans: "👉 You can use the Buy It Now (BIN) option to purchase the product at retail and get all your bids back."
+        },
+         {
+            Ques:"Are the products new" ,
+            Ans: "✅ 100% brand-new items, shipped from authorized partners with manufacturer warranty."
+        },
+         {
+            Ques:"Do I pay for shipping" ,
+            Ans: "🚚 No,ShopHub provides  free shipping on all items."
+        },
+         {
+            Ques: "How do I  get bids",
+            Ans: "👉 You can purchase bid packs from the website. Sometimes, special promotions offer extra bids at discounted prices."
+        }
     ]
 
      
@@ -314,7 +339,7 @@ const App = () => {
                 </div>
                 {/* frequently asked question section */}
              
-                <div className='  h-84 w-full   items-center  p-4    '>
+                <div className='  h-screen w-full bg-red-900   items-center  p-4    '>
                     <h2 className='text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
                         frequently asked Questions
                          <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
@@ -323,19 +348,24 @@ const App = () => {
                             </div>
                         </div>
                     </h2>
-                    <div className='flex items-center justify-evenly m-8 bg-green-800 h-90 w-240'>
-                        <img src="/query.jpg" alt="queryImg" className='h-full w-1/2' />
-                        <div className='h-full w-1/2 bg-yellow-600'>
-                                 <button></button>
-                                 <button></button>
-                                 <button></button>
-                                 <button></button>
-                                 <button></button>
-                        </div>
+                     <div className='flex items-center justify-evenly m-8 pt-3   h-full w-240'>
+                        <img src="/query.jpg" alt="queryImg" className='h-full w-1/2 ' />
+                          <div className='bg-green-600 h-full w-full flex items-center justify-evenly flex-col'>
+                            {
+                                QuesAns.map((props,idx)=>(
+                                    <QuesCard 
+                                        key={idx}
+                                        Ques={props.Ques}
+                                        Ans = {props.Ans}
+                                    />
+                                ))
+                            }
+                         </div>   
                     </div>
-
                 </div>
+
             </div>
+            
 
 
             
