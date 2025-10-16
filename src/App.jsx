@@ -16,6 +16,8 @@ import { IoMdContacts } from "react-icons/io";
 import { IoIosLock } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import QuesCard from './components/QuesCard';
+import Footer from './components/Footer';
+
 
 
 const App = () => {
@@ -147,7 +149,7 @@ const App = () => {
 
 
                     <div id='headerTwo'className=' bg-white h-3/5 mt-0   flex items-center  justify-around p-2  '>
-                        <img src="./public/bidfordeal.png" alt="logo" className='h-15 w-auto font-stretch-normal flex items-center justify-center' />
+                        <img src="/bidfordeal.png" alt="logo" className='h-15 w-auto font-stretch-normal flex items-center justify-center' />
                         <div className=' w-100  p-5 flex items-center justify-center ' >
                             <input type="text" placeholder='Search for products,brands and more ...' className=' rounded-3xl border-2 border-indigo-100 p-2  w-full focus:outline-orange-400 focus:opacity-100'  />
                             <IoSearchCircleSharp size={35} className='absolute top-20 left-160 -translate-y-1/2 text-orange-500 text-2xl cursor-pointer ' />
@@ -339,7 +341,7 @@ const App = () => {
                 </div>
                 {/* frequently asked question section */}
              
-                <div className='  h-screen w-full bg-red-900   items-center  p-4    '>
+                <div className='  h-screen w-full     items-center  p-4    '>
                     <h2 className='text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
                         frequently asked Questions
                          <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
@@ -350,7 +352,7 @@ const App = () => {
                     </h2>
                      <div className='flex items-center justify-evenly m-8 pt-3   h-full w-240'>
                         <img src="/query.jpg" alt="queryImg" className='h-full w-1/2 ' />
-                          <div className='bg-green-600 h-full w-full flex items-center justify-evenly flex-col'>
+                          <div className='  h-full w-full flex items-center justify-evenly flex-col'>
                             {
                                 QuesAns.map((props,idx)=>(
                                     <QuesCard 
@@ -364,8 +366,11 @@ const App = () => {
                     </div>
                 </div>
 
+                <div className='h-screen w-full mt-25'>
+                                    <Footer/>
+                </div>
+                
             </div>
-            
 
 
             

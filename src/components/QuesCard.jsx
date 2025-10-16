@@ -13,10 +13,10 @@ const QuesCard = ({Ques,Ans}) => {
                             <button onClick={()=>
                                 setIsActive(!isActive)
                                 } 
-                               className={`h-15 w-110 flex items-center justify-between text-lg p-1 rounded-t-lg rounded-b-3xl border border-indigo-200/80 hover:border-indigo-300transition-all duration-200 focus-within::border-4 focus-within:ring-indigo-200
+                               className={`h-15 w-110 flex items-center justify-between text-lg p-1 rounded-t-lg rounded-b-3xl border border-indigo-200/80 hover:border-indigo-300 transition-all duration-200 focus-within::border-4 focus-within:ring-indigo-200
                                     ${isActive 
-                                    ? " bg-orange-500 border border-indigo-200/80" 
-                                    : "bg-white border-4 border-indigo-200 "
+                                    ? " bg-orange-500 border border-indigo-100/80" 
+                                    : "bg-white border-2 border-indigo-100 "
                                     }`}>
                                    {Ques}
                                     <span
@@ -28,11 +28,11 @@ const QuesCard = ({Ques,Ans}) => {
                                     </span>
                             </button>
                                 {isActive && (
-                                    <div className="w-full mr-1   pl-5    transition-all duration-1000">
-                                    <p className='h-auto w-full   text-lg p-2 '>
+                                   
+                                    <p className='h-20 w-100  flex items-center justify-start tracking-tight  text-lg p-2 '>
                                        {Ans}
                                     </p>
-                                    </div>
+                                     
                                 )}
                             
                         </div>
