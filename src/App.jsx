@@ -23,7 +23,7 @@ import Footer from './components/Footer';
 const App = () => {
     const Products = [
         {
-            img: "../public/faceCream.jpeg",
+            img: "/faceCream.jpeg",
             aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
             price:0.00,
             timer:"00:00:00",
