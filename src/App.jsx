@@ -366,7 +366,8 @@ const App = () => {
                     </div>
                 </div>
 
-                <div className='h-screen w-full mt-25'>
+                <div className='h-screen w-full mt-25 flex items-center justify-center border  flex-col   border-slate-200 rounded-2xl'>
+                    
                                     <Footer/>
                 </div>
                 
