@@ -3,7 +3,7 @@ import React from 'react'
 const Carousel = () => {
   return (
     <div>
-        <img src="https://bidfordeal.com/public/admin_uploads/banner_image/1758816889.jpg" alt="photo" className='h-screen   flex items-stretch overflow-hidden   w-full' />
+        <img src="https://i.pinimg.com/1200x/0e/d9/f6/0ed9f671f6e6211ee8e786ad9dd09b44.jpg" alt="photo" className=' h-120 md:h-130  flex  object-contain object-center     w-full' />
              
             
     </div>
