@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 
 
 const App = () => {
+    
     const Products = [
         {
             img: "/faceCream.jpeg",
@@ -129,6 +130,8 @@ const App = () => {
         }
     ]
 
+
+    
      
   return (
          <div >
@@ -137,19 +140,19 @@ const App = () => {
 
 
 
-            <div className='  flex items-center justify-between p-10   font-semibold  h-20 w-full'>
-                <div className='w-auto h-20 flex justify-start flex-col gap-y-2'>
-                    <h2 className='text-3xl font-semibold'>
+            <div className='  flex items-center justify-between p-8 md:p-10      h-10 md:h-20 w-full'>
+                <div className='w-auto h-10 md:h-20 flex justify-start flex-col gap-y-1 md:gap-y-2'>
+                    <h2 className=' text-lg font-bold  md:text-3xl md:font-semibold'>
                         All Products
                     </h2>
-                    <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-3  '>
-                            <div className='h-1 bg-white rounded-2xl  opacity-80     w-10 '>
+                    <div className=' h-0.5 md:h-1 bg-orange-500 w-18 md:w-24 rounded-2xl flex items-center pl-3   '>
+                            <div className=' h-0.5 md:h-1 bg-white rounded-2xl  opacity-80   w-8 md:w-10 '>
 
                             </div>
                     </div>
                 </div>
-                <div className=' w-auto h-10 flex items-center justify-end cursor-pointer  ' >
-                    <button className='bg-orange-400 rounded px-3 flex items-center justify-center text-white font-semibold   text-lg  cursor-pointer hover:bg-black relative hover:scale-102   hover:-translate-0.5  ' >  <CiGrid42  className='font-bold tracking-tight  ' />Categories 
+                <div className=' w-auto h-8 md:h-10 flex items-center justify-end cursor-pointer  ' >
+                    <button className='bg-orange-400 rounded px-3 flex items-center justify-center text-white font-semibold text-sm  md:text-lg  cursor-pointer hover:bg-black relative hover:scale-102   hover:-translate-0.5  ' >  <CiGrid42  className='font-bold tracking-tight  ' />Categories 
                             <select className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
                                  
                                 <option value="Electronics">Electronics</option>
@@ -164,14 +167,14 @@ const App = () => {
 
                             {/* absoluate icon */}
                             <FaSortDown
-                                    className="absolute right-2 top-1/2  transform -translate-y-1/2  text-black cursor-pointer  "
-                                    size={20} 
+                                    className="absolute right-3 md:right-2 top-1/2  transform -translate-y-1/2  text-white cursor-pointer text-base md:text-xl  "
+                                     
                                 />
                     </button>
 
                 </div>
             </div>
-             <div className='w-full h-auto   flex flex-wrap items-center justify-evenly   '> 
+             <div className='w-full h-auto   flex  flex-wrap md:items-center md:justify-evenly   '> 
                 {
                     Products.map(( prod,idx)=>(
                              <Cards 
@@ -187,7 +190,7 @@ const App = () => {
                 }
              
             </div>
-            <div className=' h-10 w-210 flex items-center justify-center ml-25 mb-10 mt-8 ' >
+            <div className=' h-10 w-full flex items-center justify-center mb-5 mt-5   ' >
                     <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
                         prev
                     </button>
@@ -202,10 +205,10 @@ const App = () => {
 
 
             <div className='   h-screen w-full  '>
-                <h4 className='text-3xl flex items-center justify-center font-semibold flex-col '>
+                <h4 className=' text-xl md:text-3xl flex items-center justify-center font-semibold flex-col '>
                     How It Works
-                     <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
-                            <div className='h-1 bg-white rounded-2xl  opacity-80     w-8 '>
+                     <div className=' h-0.5 md:h-1  bg-orange-500 w-20 md:w-24 rounded-2xl flex items-center pl-8 md:pl-10 mt-1 '>
+                            <div className=' h-0.5 md:h-1 bg-white rounded-2xl  opacity-80    w-7 md:w-8 '>
 
                             </div>
                     </div>
@@ -218,33 +221,34 @@ const App = () => {
                     }
                 </div>
  
-                <div className='  h-96 w-full mt-5  pl-15 pt-2 pr-2   ' >
-                    <h2 className='capitalize text-2xl font-semibold opacity-90  '>
+                <div className=' h-auto md:h-96 w-full mt-5 pl-10  md:pl-15 pt-2 pr-2  ' >
+                    <h2 className='capitalize text-xl md:text-2xl font-bold md:font-semibold opacity-90  '>
                         About us
                     </h2>
                     
-                   <div className=' flex items-start justify-evenly h-full w-full gap-x-2 '>
+                   <div className=' md:flex items-start md:justify-evenly h-full w-full md:gap-x-2 gap-y-2'>
                   
                         <p className=' flex items-start tracking- justify-center flex-col text-lg mt-2' >
-                                Bid For Deal is the world’s premier “fair & honest” bidding site founded in 2020. We’ve delivered millions of brand-new products to satisfied customers across the Europe. Our mission is simple:
+                                Bid For Deal is the world's premier “fair & honest” bidding site founded in 2020. We’ve delivered millions of brand-new products to satisfied customers across the Europe. Our mission is simple:
                                 <ul className="list-disc pl-8 mt-2 ">
                                  
                                     <li>Make shopping exciting, fun, and affordable.</li>
                                     <li>Provide only brand-new items, shipped free, with warranties.</li>
                                     <li>Create a fair bidding environment with transparency and customer protection.</li>
                                 </ul>
-                         <button className='capitalize bg-orange-400 flex  items-center justify-center h-10 w-32 ml-3 cursor-pointer rounded-lg mt-3 text-white font-bold'>
+                         <button className='capitalize bg-orange-400 flex  items-center justify-center h-10 w-28 md:w-32 md:ml-3 cursor-pointer rounded-lg mt-3 text-white font-bold'>
                             read more
                          </button>
                          </p>
-                         <img src="/aboutImg.png" alt="aboutImg" className='h-84 w-full ' />
+                         <img src="/aboutImg.png" alt="aboutImg" className=' h-70 object-cover md:h-84 w-full ' />
                          
                    </div>
-                   
-                   
-
                 </div>
-                <div className="w-240 h-96 mt-8 ml-15 mr-8  rounded-2xl shadow-lg text-center px-6 py-10 bg-gradient-to-b from-orange-400 to-indigo-950 text-white">
+
+            {/* colorfulCard */}
+
+
+                <div className="md:w-240 md:h-96 mt-8 ml-15 mr-8  rounded-2xl shadow-lg text-center px-6 py-10 bg-gradient-to-b from-orange-400 to-indigo-950 text-white">
                              
                      <h2 className="text-3xl font-bold  tracking-tighter mt-8  mb-2">
                         <span className="gap-1">💥</span> Ready to Win Your Favorite Products at 90% Off?
@@ -304,9 +308,11 @@ const App = () => {
                         </div>
                     </div>
                 </div>
+
+
                 {/* frequently asked question section */}
              
-                <div className='  h-screen w-full     items-center  p-4    '>
+                <div className=' h-auto md:h-screen md:w-full md:items-center  pt-5      '>
                     <h2 className='text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
                         frequently asked Questions
                          <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
@@ -334,11 +340,12 @@ const App = () => {
                 <div className='h-screen w-full mt-25 flex items-center justify-center border  flex-col   border-slate-200 rounded-2xl'>
                     
                                     <Footer/>
+                                    
                                      
                 </div>
                 
+                               
             </div>
-
 
             
         </div>

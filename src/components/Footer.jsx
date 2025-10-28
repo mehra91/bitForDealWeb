@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
             
         </div>
-        <div className='bg-slate-200 h-10 w-240 mt-5 flex items-center justify-center rounded-2xl mb-5 '>
+        <div className='bg-slate-200 h-10 w-240 mt-5 flex items-center justify-center rounded-2xl mb-5 ml-12 '>
                 Copyright © 2025. All rights reserved. Developed by IWS
         </div>
     </>
