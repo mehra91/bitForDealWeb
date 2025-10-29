@@ -11,11 +11,11 @@ const MostHeader = () => {
   const navigate = useNavigate(); // ✅ initialize navigation
 
   return (
-    <div className='h-30 shadow-xl/30 w-sm mt-0 md:w-full md:h-28 flex items-center justify-center fixed z-10'>
+    <div className='h-30  shadow-xl/30 w-sm mt-0 md:w-full md:h-28 flex items-center justify-center fixed z-10'>
       <div id='topMostHeader' className='h-30 md:h-28 w-sm md:w-full mt-0 p-0 flex flex-col justify-center'>
         
         {/* Header Top Section */}
-        <div id='headerOne' className='bg-gradient-to-r from-stone-950 to-orange-400 md:w-full pb-0 md:pb-2 pt-1 md:pt-2 pl-2 mt-0 mb-0 mr-0 flex justify-around md:h-15 h-2/5 w-screen'>
+        <div id='headerOne' className='bg-gradient-to-r from-stone-950 to-orange-400 md:w-full pb-0 md:pb-2 pt-1 md:pt-2 pl-2 mt-0 mb-0 mr-0 flex justify-around md:h-15 h-2/5 w-auto'>
           <div className='flex border-r md:border-r-2 border-white text-white text-xs md:text-lg pl-2 pr-2 md:pr-20 items-center justify-center'>
             <RiAuctionLine className='mr-1' />Active Auction
           </div>
@@ -31,7 +31,7 @@ const MostHeader = () => {
         </div>
 
         {/* Header Bottom Section */}
-        <div id='headerTwo' className='bg-white h-3/5 mt-0 flex items-center justify-around md:p-2 pl-2 w-screen'>
+        <div id='headerTwo' className='bg-white h-3/5 mt-0 flex items-center justify-around md:p-2 pl-2 w-auto'>
           <img onClick={()=>navigate('/')} src="/bidfordeal.png" alt="logo" className='h-12 md:h-15 w-auto cursor-pointer' />
 
           <div className='md:w-100 md:p-5 md:flex md:items-center md:justify-center md:relative hidden'>

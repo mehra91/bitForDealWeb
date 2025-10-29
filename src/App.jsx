@@ -134,13 +134,13 @@ const App = () => {
     
      
   return (
-         <div >
+         <div className='overflow-x-hidden md:overflow-x-visible' >
                 <MostHeader />
                 <Carousel />
 
 
 
-            <div className='  flex items-center justify-between p-8 md:p-10      h-10 md:h-20 w-full'>
+            <div className='  flex items-center justify-between p-8 md:p-10      h-10 md:h-20 w-sm md:w-full'>
                 <div className='w-auto h-10 md:h-20 flex justify-start flex-col gap-y-1 md:gap-y-2'>
                     <h2 className=' text-lg font-bold  md:text-3xl md:font-semibold'>
                         All Products
@@ -151,7 +151,7 @@ const App = () => {
                             </div>
                     </div>
                 </div>
-                <div className=' w-auto h-8 md:h-10 flex items-center justify-end cursor-pointer  ' >
+                <div className=' md:w-auto  h-8 md:h-10 flex items-center justify-end cursor-pointer  ' >
                     <button className='bg-orange-400 rounded px-3 flex items-center justify-center text-white font-semibold text-sm  md:text-lg  cursor-pointer hover:bg-black relative hover:scale-102   hover:-translate-0.5  ' >  <CiGrid42  className='font-bold tracking-tight  ' />Categories 
                             <select className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
                                  
@@ -174,7 +174,7 @@ const App = () => {
 
                 </div>
             </div>
-             <div className='w-full h-auto   flex  flex-wrap md:items-center md:justify-evenly   '> 
+             <div className=' w-sm  md:w-full h-auto   flex  flex-wrap md:items-center md:justify-evenly   '> 
                 {
                     Products.map(( prod,idx)=>(
                              <Cards 
@@ -190,7 +190,7 @@ const App = () => {
                 }
              
             </div>
-            <div className=' h-10 w-full flex items-center justify-center mb-5 mt-5   ' >
+            <div className=' h-10 w-95 md:w-full flex items-center justify-center mb-5 mt-5   ' >
                     <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
                         prev
                     </button>
@@ -204,7 +204,7 @@ const App = () => {
                 {/* About Section */}
 
 
-            <div className='   h-screen w-full  '>
+            <div className='   h-auto w-sm p-2 md:w-full   '>
                 <h4 className=' text-xl md:text-3xl flex items-center justify-center font-semibold flex-col '>
                     How It Works
                      <div className=' h-0.5 md:h-1  bg-orange-500 w-20 md:w-24 rounded-2xl flex items-center pl-8 md:pl-10 mt-1 '>
@@ -240,7 +240,7 @@ const App = () => {
                             read more
                          </button>
                          </p>
-                         <img src="/aboutImg.png" alt="aboutImg" className=' h-70 object-cover md:h-84 w-full ' />
+                         <img src="/aboutImg.png" alt="aboutImg" className=' h-70 object-cover md:h-84 md:w-full w-sm ' />
                          
                    </div>
                 </div>
@@ -312,17 +312,17 @@ const App = () => {
 
                 {/* frequently asked question section */}
              
-                <div className=' h-auto md:h-screen md:w-full md:items-center  pt-5      '>
-                    <h2 className='text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
+                <div className=' h-auto md:h-screen md:w-full md:items-center  pt-5   w-sm     '>
+                    <h2 className='text-base md:text-2xl font-semibold capitalize flex items-center justify-center flex-col '>
                         frequently asked Questions
-                         <div className='h-1 bg-orange-500 w-24 rounded-2xl flex items-center pl-10 mt-2 '>
-                            <div className='h-1 bg-white rounded-2xl  opacity-80     w-8 '>
+                         <div className='h-0.5 md:h-1 bg-orange-500 md:w-24 w-20 rounded-2xl flex items-center pl-8 md:pl-10 mt-2 '>
+                            <div className=' h-0.5 md:h-1 bg-white rounded-2xl  opacity-80   w-7 md:w-8 '>
 
                             </div>
                         </div>
                     </h2>
-                     <div className='flex items-center justify-evenly m-8 pt-3   h-full w-240'>
-                        <img src="/query.jpg" alt="queryImg" className='h-full w-1/2 ' />
+                     <div className=' grid md:flex  md:items-center justify-start md:justify-evenly mt-3 md:m-8 md:pt-3   h-full w-md md:w-240'>
+                        <img src="/query.jpg" alt="queryImg" className=' h-80 w-auto md:h-full md:w-1/2 ' />
                           <div className='  h-full w-full flex items-center justify-evenly flex-col'>
                             {
                                 QuesAns.map((props,idx)=>(
@@ -337,7 +337,7 @@ const App = () => {
                     </div>
                 </div>
 
-                <div className='h-screen w-full mt-25 flex items-center justify-center border  flex-col   border-slate-200 rounded-2xl'>
+                <div className='h-screen w-sm md:w-full mt-10 md:mt-25 grid  md:flex items-center justify-center   md:flex-col border-t  border-slate-200 rounded-2xl'>
                     
                                     <Footer/>
                                     
