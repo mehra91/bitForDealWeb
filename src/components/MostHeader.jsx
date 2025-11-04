@@ -55,7 +55,7 @@ const MostHeader = () => {
               <IoMdLogIn className='mr-1 text-lg' /> Login
             </button>
 
-            <button onClick={()=>navigate('/signUp')} className='w-22 md:w-28 p-1 md:p-3 rounded-4xl flex h-9 md:h-10 items-center justify-center text-xs md:text-sm font-semibold bg-orange-400 text-white'>
+            <button onClick={()=>navigate('/signUp')} className='w-22 cursor-pointer md:w-28 p-1 md:p-3 rounded-4xl flex h-9 md:h-10 items-center justify-center text-xs md:text-sm font-semibold bg-orange-400 text-white'>
               <BsPersonFillAdd className='mr-1 text-white text-lg' /> Signup
             </button>
           </div>

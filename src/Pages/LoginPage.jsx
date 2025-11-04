@@ -2,7 +2,9 @@ import React from "react";
 import { IoIosEye } from "react-icons/io";
 import MostHeader from "../components/MostHeader";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom"; 
 const LoginPage = () => {
+    const navigate = useNavigate();
   return (
     <>
         <div className=" h-full w-sm md:w-auto  md:flex  justify-center md:overflow-x-visible overflow-x-hidden">
@@ -74,7 +76,7 @@ const LoginPage = () => {
                         {/* Sign Up Link */}
                         <p className="text-center text-gray-500 text-sm mt-6">
                             Don’t have an account?{" "}
-                            <a href="#" className="text-orange-500 font-semibold hover:underline">
+                            <a onClick={()=>{navigate('/signUp')}} href="#" className="text-orange-500 font-semibold hover:underline">
                             Sign Up
                             </a>
                         </p>

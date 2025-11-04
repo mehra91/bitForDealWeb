@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import MostHeader from "../components/MostHeader";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router";
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
         <>
@@ -52,6 +54,7 @@ const Signup = () => {
                         <input
                         type="email"
                         placeholder="Enter email"
+                        required
                         className="w-80 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
                         />
                     </div>
@@ -59,11 +62,12 @@ const Signup = () => {
                     {/* Password */}
                     <div className="mb-1 relative">
                         <label className="block text-gray-700 font-medium mb-2">
-                        Password
+                        Password 
                         </label>
                         <input
                         type={showPassword ? "text" : "password"}
                         placeholder="Enter password"
+                        required
                         className="w-80 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
                         />
                         <span
@@ -101,7 +105,9 @@ const Signup = () => {
                     {/* Sign in */}
                     <p className="text-center text-gray-600 mt-4 text-sm w-80">
                         Already have an account?{" "}
-                        <a href="#" className="text-orange-500 font-medium hover:underline">
+                        <a onClick={()=>
+                            {navigate('/login')}}
+                             href="#" className="text-orange-500 font-medium hover:underline">
                         Log In
                         </a>
                     </p>
