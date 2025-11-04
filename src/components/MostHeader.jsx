@@ -11,8 +11,8 @@ const MostHeader = () => {
   const navigate = useNavigate(); // ✅ initialize navigation
 
   return (
-    <div className='h-30  shadow-xl/30 w-sm mt-0 md:w-full md:h-28 flex items-center justify-center fixed z-10'>
-      <div id='topMostHeader' className='h-30 md:h-28 w-sm md:w-full mt-0 p-0 flex flex-col justify-center'>
+    <div className='h-25  shadow-xl/30 w-sm mt-0 md:w-full md:h-28 flex items-center justify-center fixed z-10'>
+      <div id='topMostHeader' className='h-25 md:h-28 w-sm md:w-full mt-0 p-0 flex flex-col justify-center'>
         
         {/* Header Top Section */}
         <div id='headerOne' className='bg-gradient-to-r from-stone-950 to-orange-400 md:w-full pb-0 md:pb-2 pt-1 md:pt-2 pl-2 mt-0 mb-0 mr-0 flex justify-around md:h-15 h-2/5 w-auto'>

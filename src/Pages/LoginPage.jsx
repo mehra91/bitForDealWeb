@@ -5,13 +5,13 @@ import Footer from "../components/Footer";
 const LoginPage = () => {
   return (
     <>
-        <div className=" h-full w-sm md:w-auto  md:flex  justify-center md:overfloe-x-visible overflow-x-hidden">
+        <div className=" h-full w-sm md:w-auto  md:flex  justify-center md:overflow-x-visible overflow-x-hidden">
             <MostHeader className="-top-10   " />
 
-            <div className="md:flex h-full mt-0 pt-40 w-3xl items-center justify-center   ">
+            <div className="md:flex h-full mt-0 md:pt-30 pt-40 pl-5 w-4xl items-center justify-center   ">
                     {/* Left Section */}
-                <div className="bg-sky-950  tracking-widest hidden  md:flex  justify-start pl-5  h-96 w-xs ">
-                        <h1 className="text-white text-5xl font-semibold  leading-snug h-48">
+                <div className="bg-sky-950  tracking-wider hidden  md:flex  justify-center pt-8 pl-10 pr-20 h-96 w-xs ">
+                        <h1 className="text-white text-4xl font-semibold  leading-relaxed h-48">
                             Deals on  
                             overstock  
                             inventory:  
@@ -21,20 +21,20 @@ const LoginPage = () => {
                 </div>
 
                     {/* Right Section */}
-                <div className=" flex flex-col justify-center h-auto w-sm md:px-20 m-5 ">
+                <div className=" flex flex-col justify-center h-auto w-xs md:px-10 ml-5 md:ml-0 ">
 
                     <div className=" w-sm md:max-w-md h-auto">
-                        <h2 className=" text-xl md:text-2xl font-semibold text-sky-950 mb-8   w-85 md:w-95  border-b pb-2">
+                        <h2 className=" text-lg md:text-xl font-semibold text-sky-950 mb-4     w-80 md:w-85  border-b pb-1">
                             Sign In and Get Started
                         </h2>
 
                         {/* Email Input */}
-                        <div className="md:mb-6 mb-2">
+                        <div className="md:mb-2 mb-2">
                             <label className="block text-[#162B4E] text-sm mb-1">Email</label>
                             <input
                             type="email"
                             placeholder="Enter email"required
-                            className=" p-3 rounded-full   w-85 md:w-95 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            className=" p-3 rounded-full   w-80 md:w-85 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             />
                         </div>
 
@@ -46,13 +46,13 @@ const LoginPage = () => {
                             <input
                             type="password"
                             placeholder="Enter password"
-                            className=" p-3 rounded-full border border-gray-300  w-85 md:w-95 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                            className=" p-3 rounded-full border border-gray-300  w-80 md:w-85 focus:outline-none focus:ring-2 focus:ring-orange-400"
                             />
-                                <IoIosEye className="absolute right-15 md:right-5 top-11 md:top-11 text-gray-400" />
+                                <IoIosEye className="absolute right-20 md:right-15 top-11 md:top-11 text-gray-400" />
                         </div>
 
                         {/* Stay Logged In & Forgot Password */}
-                        <div className="md:flex  items-center justify-between mb-6">
+                        <div className="md:flex  items-center justify-between mb-4 w-80 md:w-85">
                             <label className="flex items-center text-gray-500 text-sm ">
                             <input type="checkbox" className="mr-2" />
                             Stay Logged In
@@ -66,7 +66,7 @@ const LoginPage = () => {
                         </div>
 
                         {/* Login Button */}
-                        <button className="w-85 md:w-95 bg-orange-500 text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition">
+                        <button className="w-80 md:w-85 bg-orange-500 text-white py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition">
                             Log In
                             <span className="text-lg">↩</span>
                         </button>
