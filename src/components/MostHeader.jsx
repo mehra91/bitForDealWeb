@@ -38,11 +38,11 @@ const MostHeader = () => {
             <input
               type="text"
               placeholder='Search for products, brands and more ...'
-              className='md:rounded-3xl md:border-2 md:border-indigo-100 md:p-2 md:w-full md:focus:outline-orange-400 md:focus:opacity-100'
+              className='md:rounded-3xl md:text-sm md:border-2 md:border-indigo-100 md:p-2 md:w-full md:focus:outline-orange-400 md:focus:opacity-100'
             />
             <IoSearchCircleSharp
               size={35}
-              className='md:absolute md:top-11 md:right-6 md:-translate-y-1/2 md:text-orange-500 md:text-2xl md:cursor-pointer'
+              className='md:absolute md:top-10 md:right-6 md:-translate-y-1/2 md:text-orange-500 md:text-2xl md:cursor-pointer'
             />
           </div>
 

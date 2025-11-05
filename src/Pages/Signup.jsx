@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import MostHeader from "../components/MostHeader";
 import Footer from "../components/Footer";
+import Dashboard from "../components/Dashboard";
 import { useNavigate } from "react-router";
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -98,7 +99,12 @@ const Signup = () => {
                     </div>
 
                     {/* Create Button */}
-                    <button className="w-80 cursor-pointer bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-semibold transition duration-200">
+                    <button onClick={()=>
+                        {
+                            navigate('/dashboard')
+                        }
+                    } 
+                    className="w-80 cursor-pointer bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-semibold transition duration-200">
                         Create
                     </button>
 
