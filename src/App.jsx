@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import MostHeader from './components/MostHeader';
 
 import Carousel from './components/Carousel';
@@ -72,7 +72,7 @@ const App = () => {
             timer:"00:00:00",
             button:'Closed',
             para:" ₹59.00",
-            category:"Health & Beauty"
+            category:"Beauty"
         },
         {
             img: " /grinder.jpg",
@@ -90,7 +90,7 @@ const App = () => {
             timer:"00:00:00",
             button:'Closed',
             para:" ₹999.00",
-            category:"Gaiming"
+            category:"Gaming"
         },
         {
             img: " /glasses.jpg",
@@ -311,24 +311,34 @@ const App = () => {
 
     ]
    
+     const [selectedCategory, setSelectedCategory] = useState('All');
+      const[currentPage , setCurrentPage] = useState(1);
+       
+     useEffect(()=>{
+        setCurrentPage(1);
+     }, [selectedCategory])
 
-    const[currentPage , setCurrentPage] = useState(1);
+    const filteredProducts =
+  selectedCategory === "All"
+    ? Products
+    : Products.filter((prod) => prod.category === selectedCategory);
+
+   
     const itemsPerPage =8;
     const totalPages = Math.ceil(Products.length / itemsPerPage);
    
     const lastofIndex = currentPage* itemsPerPage;
     const firstofIndex = lastofIndex-itemsPerPage;
-    const currentItems = Products.slice(firstofIndex, lastofIndex);
+    const currentItems = filteredProducts.slice(firstofIndex, lastofIndex);
  
-     
+
+
+    const filterCategories = [...new Set(Products.map((prod)=>prod.category))];
+     console.log(filterCategories);
     
 
 
-//     const [selectedCategory, setSelectedCategory] = useState('All');
-//     const filteredProducts =
-//   selectedCategory === "All"
-//     ? Products
-//     : Products.filter((prod) => prod.category === selectedCategory);
+   
 
 
 
@@ -354,20 +364,27 @@ const App = () => {
                 </div>
                 <div className=' md:w-auto  h-8 md:h-10 flex items-center justify-end cursor-pointer  ' >
                     <button className='bg-orange-400 rounded px-3 flex items-center justify-center text-white font-semibold text-sm  md:text-lg  cursor-pointer hover:bg-black relative hover:scale-102   hover:-translate-0.5  ' >  <CiGrid42  className='font-bold tracking-tight  ' />Categories 
-                            <select
-                            // value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}
-                             className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
+                                <select
+                                value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}
+                                className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
+                                    
+                                    <option value="All">All</option>
+                                   
+                                        {
+                                            filterCategories.map((category,idx)=>{
+                                                return(
+                                                    <option
+                                                     key={idx}
+                                                    value={category}>
+                                                     {category}
+                                                    </option>
+                                                )
+                                            })
+                                        }
+                                    
                                  
-                                 <option value="All">All</option>
-                                <option value="Electronics">Electronics</option>
-                                <option value="Fashion">Fashion</option>
-                                <option value="Home & Kitchen">Home & Kitchen</option>
-                                <option value="Smartphones">Smartphones</option>
-                                <option value="Books">Books</option>
-                                <option value="Gaming">Gaming</option>
-                                <option value="Health & Beauty">Health & Beauty</option>
-                                <option value="Automative">Automative</option>
-                            </select>
+                                
+                                </select>
 
                             {/* absoluate icon */}
                             <FaSortDown
@@ -400,26 +417,43 @@ const App = () => {
              
             </div>
             <div className=' h-10 w-95 md:w-full flex items-center justify-center mb-5 mt-5   ' >
-                    <button onClick={()=>{
-                        if(currentPage>1 ){
-                            setCurrentPage(currentPage-1)
-                             
-                        }
-                    }}
-                     className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
-                        prev
+                   <button
+                        onClick={() => {
+                            if (currentPage > 1) {
+                            setCurrentPage(currentPage - 1);
+                            }
+                        }}
+                        disabled={currentPage === 1} 
+                        className={`flex items-center justify-center border h-8 w-15 rounded-lg mr-2
+                            ${
+                            currentPage === 1
+                                ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                                : "text-blue border-blue-600 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+                            }`}
+                        >
+                        Prev
                     </button>
+
                     <span>
                         Page {currentPage} of {totalPages}
                     </span>
-                    <button onClick={()=>{
-                        if(currentPage < totalPages){
-                            setCurrentPage(currentPage + 1 )
-                        }
-                    }}
-                    className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white ml-2 hover:cursor-pointer '>
-                        next
+                    <button
+                            onClick={() => {
+                                if (currentPage < totalPages) {
+                                setCurrentPage(currentPage + 1);
+                                }
+                            }}
+                            disabled={currentPage === totalPages} 
+                            className={`flex items-center justify-center border h-8 w-15 rounded-lg ml-2
+                                ${
+                                currentPage === totalPages
+                                    ? "bg-gray-300 text-gray-600 cursor-not-allowed"
+                                    : "text-blue border-blue-600 hover:bg-blue-600 hover:text-white hover:cursor-pointer"
+                                }`}
+                            >
+                            Next
                     </button>
+
             </div>
 
 
