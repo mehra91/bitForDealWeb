@@ -16,75 +16,8 @@ import Footer from './components/Footer';
 
 
 const App = () => {
-    
-    const Products = [
-        {
-            img: "/faceCream.jpeg",
-            aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
-            price:0.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹59.00"
-        },
-        {
-            img: " /grinder.jpg",
-            aboutProduct :" KitchenAid Artisan Series 5-Quart Mixer, Empire Re...",
-            price:971.50,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹199.00"
-        },
-        {
-            img: " /earbuds.jpeg",
-            aboutProduct :"Veho STIX II Pro True Wireless Earphones with ANC...",
-            price:2998.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹999.00"
-        },
-        {
-            img: " /glasses.jpg",
-            aboutProduct :"Earth Wood Kotor Sunglasses - Black Metal / Dark B...",
-            price:1992.00,
-            timer:"00:00:00",
-            button:'sold',
-            para:" ₹599.00"
-        },
-        {
-            img: " /headphones.jpg",
-            aboutProduct :" Beats Studio Pro - Wireless Noise Cancelling Over-...",
-            price:4999.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹999.00"
-        },
-        {
-            img: " /macBook.jpeg",
-            aboutProduct :" MacBook Pro",
-            price:105000.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹49999.00"
-        },
-        {
-            img: " /iphone.jpg",
-            aboutProduct :"MacBook Pro",
-            price:135000.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹75000.00"
-        },
-        {
-            img: " /samsung.jpg",
-            aboutProduct :" Samsung Galaxy S25 Ultra",
-            price:104599.00,
-            timer:"00:00:00",
-            button:'Closed',
-            para:" ₹39000.00"
-        }
 
-    ]
-    const aboutWorking = [
+     const aboutWorking = [
         {
             id:"01",
             heading :" - Browse Products",
@@ -104,7 +37,7 @@ const App = () => {
             id:"04",
             heading :"– Buy It Now (BIN)",
             para :"Didn’t win? No worries! Apply the bids you used toward buying the product at regular retail price."
-        },
+        },  
     ]
 
     const QuesAns =  [
@@ -129,6 +62,274 @@ const App = () => {
             Ans: "👉 You can purchase bid packs from the website. Sometimes, special promotions offer extra bids at discounted prices."
         }
     ]
+    
+
+    const Products = [
+        {
+            img: "/faceCream.jpeg",
+            aboutProduct :" Set of 3 - Grown Alchemist - Polishing Facial Exfo...",
+            price:0.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹59.00",
+            category:"Health & Beauty"
+        },
+        {
+            img: " /grinder.jpg",
+            aboutProduct :" KitchenAid Artisan Series 5-Quart Mixer, Empire Re...",
+            price:971.50,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹199.00",
+            category:"Home & Kitchen"
+        },
+        {
+            img: " /earbuds.jpeg",
+            aboutProduct :"Veho STIX II Pro True Wireless Earphones with ANC...",
+            price:2998.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹999.00",
+            category:"Gaiming"
+        },
+        {
+            img: " /glasses.jpg",
+            aboutProduct :"Earth Wood Kotor Sunglasses - Black Metal / Dark B...",
+            price:1992.00,
+            timer:"00:00:00",
+            button:'sold',
+            para:" ₹599.00",
+            category:"Fashion"
+        },
+        {
+            img: " /headphones.jpg",
+            aboutProduct :" Beats Studio Pro - Wireless Noise Cancelling Over-...",
+            price:4999.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹999.00",
+            category:"Gaming"
+        },
+        {
+            img: " /macBook.jpeg",
+            aboutProduct :" MacBook Pro",
+            price:105000.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹49999.00",
+            category:"Gaming"
+        },
+        {
+            img: " /iphone.jpg",
+            aboutProduct :"iPhone 15 Pro Max",
+            price:135000.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹75000.00",
+            category:"Smartphones"
+        },
+        {
+            img: " /samsung.jpg",
+            aboutProduct :" Samsung Galaxy S25 Ultra",
+            price:104599.00,
+            timer:"00:00:00",
+            button:'Closed',
+            para:" ₹39000.00",
+            category:"Smartphones"
+        },
+        {
+    img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-15-pro-max-blue-titanium",
+    aboutProduct: "Apple iPhone 15 Pro Max",
+    price: 159999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹89999.00",
+    category: "Smartphones"
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-m3-2025",
+    aboutProduct: "Apple MacBook Air M3 (2025) – 13-inch",
+    price: 124999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹79999.00",
+    category: "Laptops"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/51eOztNdGLL._SL1500_.jpg",
+    aboutProduct: "Sony PlayStation 5 Slim (1TB)",
+    price: 54999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹41999.00",
+    category: "Gaming"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/51ZyJvPtN5L._SL1000_.jpg",
+    aboutProduct: "Dyson Supersonic Hair Dryer",
+    price: 38999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹28999.00",
+    category: "Beauty"
+  },
+  {
+    img: "https://static.nike.com/a/images/t_default/3c6b2f0d-2f9e-4dcb-9d7a-72c093d29c85/air-zoom-pegasus-41-running-shoes.png",
+    aboutProduct: "Nike Air Zoom Pegasus 41 Running Shoes",
+    price: 12999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹7999.00",
+    category: "Fashion"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71Zf9uUp+GL._SL1500_.jpg",
+    aboutProduct: "Canon EOS R7 Mirrorless Camera (Body Only)",
+    price: 114999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹89999.00",
+    category: "Cameras"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/61u48FEs0rL._SL1500_.jpg",
+    aboutProduct: "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+    price: 29999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹21999.00",
+    category: "Audio"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/61M8hIo0YWL._SL1500_.jpg",
+    aboutProduct: "KitchenAid Artisan Mixer 5-Quart",
+    price: 58999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹42999.00",
+    category: "Home Appliances"
+  },
+  {
+    img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/apple-watch-series10-hero",
+    aboutProduct: "Apple Watch Series 10 GPS 45mm",
+    price: 49999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹33999.00",
+    category: "Wearables"
+  },
+    {
+    img: "https://m.media-amazon.com/images/I/71Sa8+9fQML._SL1500_.jpg",
+    aboutProduct: "OnePlus 13 Pro 5G (Emerald Green, 256GB)",
+    price: 84999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹59999.00",
+    category: "Smartphones"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/61bM+3d8ufL._SL1500_.jpg",
+    aboutProduct: "Dell XPS 14 (2025) OLED Laptop",
+    price: 169999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹129999.00",
+    category: "Laptops"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71XzA4pXHLL._SL1500_.jpg",
+    aboutProduct: "Samsung 55-inch 4K QLED Smart TV (2025)",
+    price: 78999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹56999.00",
+    category: "Electronics"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71nyg4YJ6HL._SL1500_.jpg",
+    aboutProduct: "Boat Airdopes 441 Pro TWS Earbuds",
+    price: 3999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹2499.00",
+    category: "Audio"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71ZJQEZbECL._SL1500_.jpg",
+    aboutProduct: "LG 9kg Front Load Washing Machine AI Direct Drive",
+    price: 58999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹46999.00",
+    category: "Home Appliances"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/61C4MWlKzUL._SL1500_.jpg",
+    aboutProduct: "Fossil Gen 6 Smartwatch (Brown Leather)",
+    price: 24999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹18999.00",
+    category: "Wearables"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/51ti+v1tH4L._SL1000_.jpg",
+    aboutProduct: "Adidas Ultraboost 24 Running Shoes",
+    price: 18999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹12999.00",
+    category: "Fashion"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/81bAwX5GQDL._SL1500_.jpg",
+    aboutProduct: "Apple iPad Air M2 (2025) Wi-Fi 128GB",
+    price: 68999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹51999.00",
+    category: "Tablets"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/51eQFvJ+f9L._SL1000_.jpg",
+    aboutProduct: "Philips Air Fryer HD9252/90 – Rapid Air Technology",
+    price: 10999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹7999.00",
+    category: "Kitchen"
+  },
+  {
+    img: "https://m.media-amazon.com/images/I/71pAgZArA1L._SL1500_.jpg",
+    aboutProduct: "Logitech MX Master 3S Wireless Mouse",
+    price: 10999.00,
+    timer: "00:00:00",
+    button: "Closed",
+    para: "₹8499.00",
+    category: "Accessories"
+  }
+
+    ]
+   
+
+    const[currentPage , setCurrentPage] = useState(1);
+    const itemsPerPage =8;
+    const totalPages = Math.ceil(Products.length / itemsPerPage);
+   
+    const lastofIndex = currentPage* itemsPerPage;
+    const firstofIndex = lastofIndex-itemsPerPage;
+    const currentItems = Products.slice(firstofIndex, lastofIndex);
+ 
+     
+    
+
+
+//     const [selectedCategory, setSelectedCategory] = useState('All');
+//     const filteredProducts =
+//   selectedCategory === "All"
+//     ? Products
+//     : Products.filter((prod) => prod.category === selectedCategory);
+
 
 
     
@@ -153,8 +354,11 @@ const App = () => {
                 </div>
                 <div className=' md:w-auto  h-8 md:h-10 flex items-center justify-end cursor-pointer  ' >
                     <button className='bg-orange-400 rounded px-3 flex items-center justify-center text-white font-semibold text-sm  md:text-lg  cursor-pointer hover:bg-black relative hover:scale-102   hover:-translate-0.5  ' >  <CiGrid42  className='font-bold tracking-tight  ' />Categories 
-                            <select className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
+                            <select
+                            // value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}
+                             className=' w-5 flex items-center justify-center text-black appearance-none border-none outline-none  px-3 py-2 cursor-pointer ' >
                                  
+                                 <option value="All">All</option>
                                 <option value="Electronics">Electronics</option>
                                 <option value="Fashion">Fashion</option>
                                 <option value="Home & Kitchen">Home & Kitchen</option>
@@ -174,33 +378,61 @@ const App = () => {
 
                 </div>
             </div>
-             <div className=' w-sm  md:w-full h-auto   flex  flex-wrap md:items-center md:justify-evenly   '> 
+
+
+
+
+
+             <div className=' w-sm  md:w-full h-auto   flex  flex-wrap md:items-center md:justify-evenly'> 
                 {
-                    Products.map(( prod,idx)=>(
+                    currentItems.map(( prod,idx)=>(
                              <Cards 
-                              key={idx}
-                              img={prod.img}
-                              about = {prod.aboutProduct}
-                              price = {prod.price}
-                              timer={prod.timer } 
-                              btn={prod.button} 
-                              
-                              para = {prod.para} />
+                                key={idx}
+                                img={prod.img}
+                                about = {prod.aboutProduct}
+                                price = {prod.price}
+                                timer={prod.timer } 
+                                btn={prod.button} 
+                                para = {prod.para}
+                             />
                     ))
                 }
              
             </div>
             <div className=' h-10 w-95 md:w-full flex items-center justify-center mb-5 mt-5   ' >
-                    <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
+                    <button onClick={()=>{
+                        if(currentPage>1 ){
+                            setCurrentPage(currentPage-1)
+                             
+                        }
+                    }}
+                     className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white mr-2 hover:cursor-pointer'>
                         prev
                     </button>
                     <span>
-                        Page 1 of 1
+                        Page {currentPage} of {totalPages}
                     </span>
-                    <button className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white ml-2 hover:cursor-pointer '>
+                    <button onClick={()=>{
+                        if(currentPage < totalPages){
+                            setCurrentPage(currentPage + 1 )
+                        }
+                    }}
+                    className=' flex items-center justify-center border h-8 w-15 rounded-lg text-blue border-blue-600 hover:bg-blue-600 hover:text-white ml-2 hover:cursor-pointer '>
                         next
                     </button>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+            
                 {/* About Section */}
 
 
@@ -230,12 +462,12 @@ const App = () => {
                   
                         <p className=' flex items-start tracking- justify-center flex-col text-lg mt-2' >
                                 Bid For Deal is the world's premier “fair & honest” bidding site founded in 2020. We’ve delivered millions of brand-new products to satisfied customers across the Europe. Our mission is simple:
-                                <ul className="list-disc pl-8 mt-2 ">
+                                <span className="list-disc pl-8 mt-2 ">
                                  
                                     <li>Make shopping exciting, fun, and affordable.</li>
                                     <li>Provide only brand-new items, shipped free, with warranties.</li>
                                     <li>Create a fair bidding environment with transparency and customer protection.</li>
-                                </ul>
+                                </span>
                          <button className='capitalize bg-orange-400 flex  items-center justify-center h-10 w-28 md:w-32 md:ml-3 cursor-pointer rounded-lg mt-3 text-white font-bold'>
                             read more
                          </button>
