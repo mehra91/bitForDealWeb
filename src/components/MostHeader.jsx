@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import { RiExchangeDollarLine, RiAuctionLine } from "react-icons/ri";
 import { LuArrowLeftRight } from "react-icons/lu";
 import { LiaGiftSolid } from "react-icons/lia";
@@ -9,6 +9,13 @@ import { useNavigate } from "react-router-dom"; // ✅ import navigation hook
 
 const MostHeader = () => {
   const navigate = useNavigate(); // ✅ initialize navigation
+  const[searchTerm ,setSearchTerm]=useState("");
+  const handleSearchChange =(e)=>{
+     const val=  setSearchTerm(e.target.value);
+     console.log("Search Term:", val);  
+  }
+
+  
 
   return (
     <div className='h-25  shadow-xl/30 w-sm mt-0 md:w-full md:h-28 flex items-center justify-center fixed z-10'>
