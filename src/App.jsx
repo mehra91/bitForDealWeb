@@ -386,7 +386,7 @@ const App = () => {
                                 
                                 </select>
 
-                            {/* absoluate icon */}
+                             
                             <FaSortDown
                                     className="absolute right-3 md:right-2 top-1/2  transform -translate-y-1/2  text-white cursor-pointer text-base md:text-xl  "
                                      
